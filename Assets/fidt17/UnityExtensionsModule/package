@@ -1,0 +1,11 @@
+{
+    "name": "com.fidt17.UnityExtensionsModule",
+    "version": "0.0.1",
+    "displayName": "Unity Extensions Module",
+    "description": "Useful extensions",
+    "unity": "2021.3",
+    "author": {
+        "name": "fidt17",
+        "email": "fidt17@gmail.com"
+    }
+}
