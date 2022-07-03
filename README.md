@@ -1,5 +1,5 @@
 # UnityExtensionsModule
-## Version : 1.0.3
+## Version : 1.0.4
 
 ## Installation
 1) Unity Package Manager
@@ -20,6 +20,17 @@
 - Layer Extensions
   - Contains
   - SetLayerRecursive
+
+- Math Extensions
+  - AdvSign
+  - Remap
+
+- Vector3 Extensions
+  - RandomOffset
+
+- Tween Extensions
+  - Move
+  - Scale
 
 - Debug Draw Extensions
   - Draw Cross

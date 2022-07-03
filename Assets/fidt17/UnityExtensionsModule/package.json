@@ -1,6 +1,6 @@
 {
     "name": "com.fidt17.uem",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "displayName": "Unity Extensions Module",
     "description": "Useful extensions",
     "unity": "2021.3",
