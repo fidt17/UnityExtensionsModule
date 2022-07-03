@@ -27,5 +27,39 @@ namespace fidt17.UnityExtensionsModule.Runtime
             
             return array[Random.Range(0, array.Length)];   
         }
+        
+        /// <summary>
+        /// Shuffles a list
+        /// </summary>
+        public static void Shuffle<T>(this List<T> list)
+        {
+            if (list == null) throw new ArgumentNullException();
+            
+            var rng = new System.Random();
+            int n = list.Count;  
+            while (n > 1)
+            {  
+                n--;  
+                int k = rng.Next(n + 1);  
+                (list[k], list[n]) = (list[n], list[k]);
+            }  
+        }
+
+        /// <summary>
+        /// Shuffles an array
+        /// </summary>
+        public static void Shuffle<T>(this T[] array)
+        {
+            if (array == null) throw new ArgumentNullException();
+            
+            var rng = new System.Random();
+            int n = array.Length;  
+            while (n > 1)
+            {  
+                n--;  
+                int k = rng.Next(n + 1);  
+                (array[k], array[n]) = (array[n], array[k]);
+            }  
+        }
     }
 }
