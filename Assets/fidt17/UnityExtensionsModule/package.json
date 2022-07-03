@@ -4,6 +4,7 @@
     "displayName": "Unity Extensions Module",
     "description": "Useful extensions",
     "unity": "2021.3",
+    "unityRelease": "1f1",
     "author": {
         "name": "fidt17",
         "email": "fidt17@gmail.com"
