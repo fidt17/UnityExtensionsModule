@@ -37,19 +37,13 @@ namespace fidt17.UnityExtensionsModule.Tests
         [Test]
         public void ShuffleListTest()
         {
-            var l = new List<int>();
-            l = null;
-            
-            Assert.Throws<ArgumentNullException>(() => l.Shuffle());
+            Assert.Throws<ArgumentNullException>(() => ((List<int>)null).Shuffle());
         }
 
         [Test]
         public void ShuffleArrayTest()
         {
-            var arr = new int[1];
-            arr = null;
-
-            Assert.Throws<ArgumentNullException>(() => arr.Shuffle());
+            Assert.Throws<ArgumentNullException>(() => ((int[])null).Shuffle());
         }
     }
 }

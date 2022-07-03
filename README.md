@@ -1,12 +1,12 @@
 # UnityExtensionsModule
-## Version : 1.0.2
+## Version : 1.0.3
 
-## Instalation
+## Installation
 1) Unity Package Manager
 2) Add package from git URL:
 3) https://github.com/fidt17/UnityExtensionsModule.git?path=/Assets/fidt17/UnityExtensionsModule
 
-## Contants
+## Contents
 
 - Collection Extensions
   - GetRandomElement
@@ -20,3 +20,9 @@
 - Layer Extensions
   - Contains
   - SetLayerRecursive
+
+- Debug Draw Extensions
+  - Draw Cross
+  - Draw Diagonal Cross
+  - Draw Rect
+  - Draw Circle

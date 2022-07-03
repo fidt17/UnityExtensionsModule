@@ -12,7 +12,7 @@ namespace fidt17.UnityExtensionsModule.Runtime
         public static T GetRandomElement<T>(this List<T> list)
         {
             if (list == null) throw new ArgumentNullException();
-            if (list.Count == 0) throw new ArgumentException("Collection is empty.");
+            if (list.Count == 0) throw new ArgumentException("List is empty");
 
             return list[Random.Range(0, list.Count)];
         }
