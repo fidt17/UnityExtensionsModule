@@ -7,12 +7,9 @@
         /// </summary>
         public static float AdvSign(float value)
         {
-            return value switch
-            {
-                > 0 => 1,
-                < 0 => -1,
-                _ => 0
-            };
+            if (value > 0) return 1;
+            if (value < 0) return -1;
+            return 0;
         }
         
         public static float Remap(float value, float low1, float high1, float low2, float high2)
