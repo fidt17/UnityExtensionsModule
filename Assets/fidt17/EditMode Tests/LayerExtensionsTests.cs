@@ -4,7 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace fidt17.UnityExtensionsModule.Tests
+namespace fidt17.EditMode_Tests
 {
     public class LayerExtensionsTests
     {

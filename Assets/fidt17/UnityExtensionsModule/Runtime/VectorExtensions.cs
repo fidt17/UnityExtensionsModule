@@ -4,19 +4,25 @@ namespace fidt17.UnityExtensionsModule.Runtime
 {
     public static class VectorExtensions
     {
-        public static Vector2 RandomOffset(Vector2 v2, float range)
+        /// <summary>
+        /// Returns a new Vector2 that lies inside a circle of <paramref name="radius"/> with center in <paramref name="origin"/>
+        /// </summary>
+        public static Vector2 RandomOffset(Vector2 origin, float radius)
         {
-            v2.x += Random.Range(-range, range);
-            v2.y += Random.Range(-range, range);
-            return v2;
+            origin.x += Random.Range(-radius, radius);
+            origin.y += Random.Range(-radius, radius);
+            return origin;
         }
 
-        public static Vector3 RandomOffset(Vector3 v3, float range)
+        /// <summary>
+        /// Returns a new Vector3 that lies inside a sphere of <paramref name="radius"/> with center in <paramref name="origin"/>
+        /// </summary>
+        public static Vector3 RandomOffset(Vector3 origin, float radius)
         {
-            v3.x += Random.Range(-range, range);
-            v3.y += Random.Range(-range, range);
-            v3.z += Random.Range(-range, range);
-            return v3;
+            origin.x += Random.Range(-radius, radius);
+            origin.y += Random.Range(-radius, radius);
+            origin.z += Random.Range(-radius, radius);
+            return origin;
         }
     }
 }

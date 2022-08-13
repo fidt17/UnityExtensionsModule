@@ -6,7 +6,7 @@ namespace fidt17.UnityExtensionsModule.Runtime
     public static class LayerExtensions
     {
         /// <summary>
-        /// Checks if LayerMask contains Layer 
+        /// Checks if <paramref name="mask"/> contains <paramref name="layer"/> 
         /// </summary>
         public static bool Contains(this LayerMask mask, int layer)
         {
@@ -14,7 +14,7 @@ namespace fidt17.UnityExtensionsModule.Runtime
         }
 
         /// <summary>
-        /// Sets Layer of all GameObjects down the hierarchy (includes root) to provided Layer.
+        /// Sets layer of all GameObjects down the hierarchy (includes root) to <paramref name="layer"/>.
         /// </summary>
         public static void SetLayerRecursive(this GameObject gObj, int layer)
         {

@@ -1,7 +1,7 @@
 ﻿using fidt17.UnityExtensionsModule.Runtime;
 using NUnit.Framework;
 
-namespace fidt17.UnityExtensionsModule.Tests
+namespace fidt17.EditMode_Tests
 {
     public class MathExtensionsTests
     {

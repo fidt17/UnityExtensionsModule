@@ -1,8 +1,8 @@
 {
     "name": "com.fidt17.uem",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "displayName": "Unity Extensions Module",
-    "description": "Useful extensions",
+    "description": "Useful extensions for UnityEngine.\n git: https://github.com/fidt17/UnityExtensionsModule",
     "unity": "2021.3",
     "unityRelease": "1f1",
     "author": {
