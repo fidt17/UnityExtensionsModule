@@ -63,6 +63,29 @@ namespace fidt17.UnityExtensionsModule.Runtime
         
         #endregion
 
+        #region Rotate
+
+        /// <summary>
+        /// Rotate transform from <paramref name="start"/> to <paramref name="target"/> in <paramref name="duration"/> seconds.
+        /// </summary>
+        public static IEnumerator Rotate(Transform transform, Quaternion start, Quaternion target, float duration)
+        {
+            yield return Progress(duration, progress =>
+            {
+                transform.rotation = Quaternion.Slerp(start, target, progress);
+            });
+        }
+        
+        /// <summary>
+        /// Rotate transform  to <paramref name="target"/> in <paramref name="duration"/> seconds.
+        /// </summary>
+        public static IEnumerator Rotate(Transform transform, Quaternion target, float duration)
+        {
+            yield return Rotate(transform, transform.rotation, target, duration);
+        }
+
+        #endregion
+
         #region Scale
         
         /// <summary>

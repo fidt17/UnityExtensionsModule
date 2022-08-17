@@ -42,6 +42,9 @@
   IEnumerator Move(Transform transform, Vector3 startPosition, Vector3 targetPosition, float duration);
   IEnumerator Move(Transform transform, Vector3 targetPosition, float duration);
   
+  IEnumerator Rotate(Transform transform, Quaternion start, Quaternion target, float duration);
+  IEnumerator Rotate(Transform transform, Quaternion target, float duration);
+  
   IEnumerator Scale(Transform transform, Vector3 start, Vector3 target, float duration);
   IEnumerator Scale(Transform transform, Vector3 target, float duration);
   IEnumerator ScaleY(Transform transform, float target, float duration);
