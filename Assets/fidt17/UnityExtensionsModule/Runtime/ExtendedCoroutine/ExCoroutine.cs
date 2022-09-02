@@ -72,6 +72,7 @@ namespace fidt17.UnityExtensionsModule.Runtime.ExtendedCoroutine
         public void Stop()
         {
             if (IsRunning == false) return;
+            if (_mainCoroutine == null) return; // can happen when ExCoroutine gets started and canceled in the same frame
             
             _onStopAction?.Invoke();
             
