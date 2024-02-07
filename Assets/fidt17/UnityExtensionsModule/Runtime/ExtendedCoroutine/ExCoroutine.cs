@@ -61,6 +61,8 @@ namespace fidt17.UnityExtensionsModule.Runtime.ExtendedCoroutine
         /// </summary>
         public void Start(IEnumerable<IEnumerator> enumerators, ExecutionOrder executionOrder)
         {
+            if (_owner == null || !_owner.gameObject.activeInHierarchy) return;
+            
             if (IsRunning) Stop();
             _enumerators.AddRange(enumerators);
             StartExCoroutine(executionOrder);
@@ -76,7 +78,7 @@ namespace fidt17.UnityExtensionsModule.Runtime.ExtendedCoroutine
             
             _onStopAction?.Invoke();
             
-            if (_owner.gameObject != null)
+            if (_owner != null)
             {
                 _owner.StopCoroutine(_mainCoroutine);
                 _mainCoroutine = null;
@@ -96,7 +98,7 @@ namespace fidt17.UnityExtensionsModule.Runtime.ExtendedCoroutine
         
         private void StartExCoroutine(ExecutionOrder executionOrder)
         {
-            if (_owner.gameObject == null)
+            if (_owner == null)
             {
                 Debug.LogWarning("[ExCoroutine:Warning] Cannot start ExCoroutine because owner is missing.");
                 return;

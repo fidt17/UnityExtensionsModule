@@ -12,15 +12,14 @@ namespace fidt17.UnityExtensionsModule.Runtime
         /// <summary>
         /// Enumerator that last for <paramref name="duration"/> seconds.
         /// After each yield invokes <paramref name="progressAction"/> with float argument [0->1].
-        /// Can specify yield function.
         /// </summary>
-        public static IEnumerator Progress(float duration, Action<float> progressAction, Func<IEnumerator> yieldFunc = null)
+        public static IEnumerator Progress(float duration, Action<float> progressAction)
         {
             for (float t = 0; t < duration; t += Time.deltaTime)
             {
                 var progress = t / duration;
                 progressAction?.Invoke(progress);
-                yield return yieldFunc;
+                yield return null;
             }
             progressAction?.Invoke(1);
         }
@@ -28,14 +27,13 @@ namespace fidt17.UnityExtensionsModule.Runtime
         /// <summary>
         /// /// Enumerator that last for <paramref name="duration"/> seconds.
         /// After each yield invokes <paramref name="progressAction"/> with float argument [1->0].
-        /// Can specify yield function.
         /// </summary>
-        public static IEnumerator ReverseProgress(float duration, Action<float> progressAction, Func<IEnumerator> yieldFunc = null)
+        public static IEnumerator ReverseProgress(float duration, Action<float> progressAction)
         {
             yield return Progress(duration, f =>
             {
                 progressAction?.Invoke(1 - f);
-            }, yieldFunc);
+            });
         }
 
         #endregion
