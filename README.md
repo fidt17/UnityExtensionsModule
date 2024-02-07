@@ -1,5 +1,5 @@
 # UnityExtensionsModule
-## Version : 1.0.5
+## Version : 1.0.6
 
 ## Installation
 1) Unity Package Manager
@@ -36,8 +36,8 @@
    
 ### Tween Extensions
 ```csharp
-  IEnumerator Progress(float duration, Action<float> progressAction, Func<IEnumerator> yieldFunc = null);
-  IEnumerator ReverseProgress(float duration, Action<float> progressAction, Func<IEnumerator> yieldFunc = null);
+  IEnumerator Progress(float duration, Action<float> progressAction);
+  IEnumerator ReverseProgress(float duration, Action<float> progressAction);
   
   IEnumerator Move(Transform transform, Vector3 startPosition, Vector3 targetPosition, float duration);
   IEnumerator Move(Transform transform, Vector3 targetPosition, float duration);
